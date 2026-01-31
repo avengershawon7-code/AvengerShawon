@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAWON | Elite Designer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #00ff88;
+            --secondary: #00ffee;
+            --bg: #030303;
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: #fff;
+            margin: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Animated Background Gradient */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -20%, #00ff8815, transparent);
+            z-index: -1;
+        }
+
+        /* Header Styling */
+        header {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .profile-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-ring {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            padding: 6px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            animation: rotate 5s linear infinite;
+        }
+
+        @keyframes rotate { 100% { filter: hue-rotate(360deg); } }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--bg);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin: 20px 0 10px;
+            letter-spacing: 6px;
+            background: linear-gradient(to right, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        /* Portfolio Grid */
+        .container { padding: 60px 5%; }
+        
+        .section-header {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            letter-spacing: 3px;
+            color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .card:hover img { filter: brightness(1.1); }
+
+        .card-body { padding: 20px; }
+        
+        .card-body h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--secondary);
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-box {
+            margin: 100px 5% 50px;
+            padding: 60px 20px;
+            background: var(--glass);
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.03);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #fff;
+            text-decoration: none;
+            transition: 0.4s;
+            border: 1px solid var(--border);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: #000;
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #555;
+            letter-spacing: 2px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="profile-container">
+            <div class="profile-ring">
+                <img src="https://i.postimg.cc/sDCmLwjY/IMG-20251220-162530.jpg" class="profile-img" alt="Shawon">
+            </div>
+        </div>
+        <h1>SHAWON</h1>
+        <div class="tagline">Visual Architect • Thumbnail Expert • Logo Designer</div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-header">// FEATURED MASTERPIECES</h2>
+        <div class="grid" id="gallery">
+            </div>
+    </div>
+
+    <section class="contact-box">
+        <h2 style="font-family:Orbitron; letter-spacing: 5px;">STAY CONNECTED</h2>
+        <p style="color:#aaa;">Ready to take your brand to the next level?</p>
+        <div class="social-row">
+            <a href="https://wa.me/8801838463250" class="social-link" style="color:#25d366;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/1Amaw2tGN1/" class="social-link" style="color:#1877f2;"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.fiverr.com/avengershawon" class="social-link" style="color:#1dbf73;"><i class="fa-solid fa-briefcase"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        DESIGNED BY SHAWON © 2026 | PREMIUM CREATIVE STUDIO
+    </footer>
+
+    <script>
+        const gallery = document.getElementById('gallery');
+        
+        // তোমার পাঠানো মোট ১৭টি ইমেজের তালিকা
+        const myWorks = [
+            { url: "https://i.postimg.cc/W3M5z9gY/Lucid-Origin-Create-a-You-Tube-gaming-thumbnail-using-the-uploa-1.jpg", title: "Pro Gaming Thumbnail", tag: "Viral" },
+            { url: "https://i.postimg.cc/sXFnVFQ8/gemini-2-5-flash-image-Create-a-You-Tube-gaming-thumbnail-using-the-uploaded-portrait-of-the-person.jpg", title: "YouTube Concept", tag: "Creative" },
+            { url: "https://i.postimg.cc/6qtYvdhq/seedream-4-5-Ultra-realistic-deep-space-rendering-of-an-oxygen-dominated-nebula-where-coheren-0.jpg", title: "Nebula Rendering", tag: "VFX" },
+            { url: "https://i.postimg.cc/G20Mc08S/gpt-image-1-5-amazing-photo-of-a-cinematic-short-scene-depicting-a-romantic-love-story-0.jpg", title: "Cinematic Scene", tag: "Concept" },
+            { url: "https://i.postimg.cc/8cNt6hbF/Lucid-Origin-Create-a-You-Tube-gaming-thumbnail-using-the-uploa-3.jpg", title: "Action Thumbnail", tag: "Gaming" },
+            { url: "https://i.postimg.cc/6qczLyHv/alchemyrefiner-alchemymagic-1-7de88429-35cf-47df-8eb5-686770f17547-0.jpg", title: "Premium Portrait", tag: "Edit" },
+            { url: "https://i.postimg.cc/wMg0mhk5/alchemyrefiner-alchemymagic-2-5b8c647e-d2c3-41ac-af4a-d5f224457145-0.jpg", title: "Visual Magic", tag: "Art" },
+            { url: "https://i.postimg.cc/90b1trxG/alchemyrefiner-alchemymagic-0-57eec9e0-f332-4857-8c65-2c4c428cc9e8-0.jpg", title: "Graphic Master", tag: "Design" },
+            { url: "https://i.postimg.cc/NFBpH1xM/gpt-image-1-5-A-stylized-black-cat-logo-featuring-a-sleek-and-modern-design-with-the-cat-s-bod-0.jpg", title: "Minimal Logo", tag: "Branding" },
+            // নতুন ৮টি ইমেজ নিচে যুক্ত হলো
+            { url: "https://i.postimg.cc/qMVHRYnR/Visual-Effects-or-VFX.jpg", title: "VFX Masterpiece", tag: "Visuals" },
+            { url: "https://i.postimg.cc/W3dcFcXD/hq720-(1).jpg", title: "High-End Visuals", tag: "Pro" },
+            { url: "https://i.postimg.cc/qvGTWLNh/FVX-in-filmmaking.png", title: "Cinematic VFX", tag: "Film" },
+            { url: "https://i.postimg.cc/DyZyrR0J/maxresdefault.jpg", title: "Elite Game Art", tag: "Elite" },
+            { url: "https://i.postimg.cc/66DtZTs5/create-the-best-youtube-thumbnail-design-ever.jpg", title: "Supreme Design", tag: "Best" },
+            { url: "https://i.postimg.cc/nr1jXmdj/ff25c27c-29b0-47fb-896b-d2b384d62822.webp", title: "Stylized Concept", tag: "Art" },
+            { url: "https://i.postimg.cc/0NmN6mQt/hq720.jpg", title: "Gaming Scene", tag: "Vibe" },
+            { url: "https://i.postimg.cc/LX36DpzM/maxresdefault-(1).jpg", title: "Action Highlight", tag: "Action" }
+        ];
+
+        myWorks.forEach(work => {
+            gallery.innerHTML += `
+                <div class="card">
+                    <span class="badge">${work.tag}</span>
+                    <img src="${work.url}" alt="${work.title}">
+                    <div class="card-body">
+                        <h3>${work.title}</h3>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+
+</body>
+</html>
